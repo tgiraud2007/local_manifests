@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="marble" fetch="https://github.com/tgiraud2007" revision="seventeen" />
+  <remote name="los" fetch="https://github.com/LineageOS" />
+
+  <!-- Kernel 6.6 (KERNEL.PLATFORM.4.0.r1) -->
+  <include name="manifests/snippets/kernel-6.6.xml" />
+  <project name="android_kernel_xiaomi_sm8450-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-kernel" remote="marble" />
+  <project name="android_kernel_xiaomi_sm8450-devicetrees-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-devicetrees" remote="marble" />
+  <project name="android_kernel_xiaomi_sm8450-modules-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-modules" remote="marble" />
+  <project name="android_kernel_xiaomi_sm8450-build-6.6" path="kernel/platform/kernel-6.6/vendor/xiaomi/sm8450-build" remote="marble" />
+
+  <!-- Device trees -->
+  <project name="android_device_xiaomi_marble" path="device/xiaomi/marble" remote="marble" />
+  <project name="android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="marble" />
+  <project name="android_hardware_xiaomi" path="hardware/xiaomi" remote="los" revision="lineage-24.0" />
+
+  <!-- Vendor blobs -->
+  <project name="proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="marble" clone-depth="1" />
+  <project name="proprietary_vendor_xiaomi_marble" path="vendor/xiaomi/marble" remote="marble" clone-depth="1" />
+
+  <!-- Audio HAL fork (multi-mic mapping) -->
+  <remove-project path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" />
+  <project name="android_hardware_qcom_audio-ar" path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" remote="marble" groups="qcom,waipio-6.6-vendor" />
+</manifest>
