@@ -5,9 +5,9 @@ Android 17, PixelOS `seventeen`, kernel 6.6 (based on cupid-development `lineage
 ```bash
 repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b seventeen --git-lfs
 git clone https://github.com/tgiraud2007/local_manifests -b seventeen .repo/local_manifests
-repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+repo sync -c -j8 --force-sync --no-tags
 source build/envsetup.sh
-lunch lineage_marble-<release>-userdebug
+lunch lineage_marble-cp2a-userdebug
 m pixelos
 ```
 
