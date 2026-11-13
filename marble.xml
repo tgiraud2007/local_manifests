@@ -22,4 +22,8 @@
   <!-- Audio HAL fork (multi-mic mapping) -->
   <remove-project path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" />
   <project name="android_hardware_qcom_audio-ar" path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" remote="marble" groups="qcom,waipio-6.6-vendor" />
+
+  <!-- Display HAL fork (keep GPU composed layers contiguous: Display P3 photo picker) -->
+  <remove-project path="hardware/qcom-caf/sm8450-6.6/display/hal" />
+  <project name="android_hardware_qcom_display" path="hardware/qcom-caf/sm8450-6.6/display/hal" remote="marble" groups="qcom" />
 </manifest>
