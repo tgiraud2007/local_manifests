@@ -25,6 +25,9 @@
   <project name="device_xiaomi_miuicamera-marble" path="device/xiaomi/miuicamera-marble" remote="evo" revision="0b22ae7c40b34a0b2c235ff5bdbcdeb0f92ad510" upstream="cnb" />
   <project name="vendor_xiaomi_miuicamera-marble" path="vendor/xiaomi/miuicamera-marble" remote="evo" revision="469a54819e0d54ffecaf693f4dbcf8a07dfa8838" upstream="cnb" clone-depth="1" />
 
+  <!-- PixelOS DolbyAtmos app clashes with the Evo hardware/dolby app (same preinstalled-packages-platform-dolby.xml) -->
+  <remove-project path="packages/apps/DolbyAtmos" />
+
   <!-- Audio HAL fork (multi-mic mapping) -->
   <remove-project path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" />
   <project name="android_hardware_qcom_audio-ar" path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" remote="marble" groups="qcom,waipio-6.6-vendor" />
