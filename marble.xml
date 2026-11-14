@@ -2,6 +2,7 @@
 <manifest>
   <remote name="marble" fetch="https://github.com/tgiraud2007" revision="seventeen" />
   <remote name="los" fetch="https://github.com/LineageOS" />
+  <remote name="evo" fetch="https://github.com/Evolution-X-Devices" />
 
   <!-- Kernel 6.6 (KERNEL.PLATFORM.4.0.r1) -->
   <include name="manifests/snippets/kernel-6.6.xml" />
@@ -18,6 +19,11 @@
   <!-- Vendor blobs -->
   <project name="proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="marble" clone-depth="1" />
   <project name="proprietary_vendor_xiaomi_marble" path="vendor/xiaomi/marble" remote="marble" clone-depth="1" />
+
+  <!-- Dolby Atmos (AIDL) and MIUI Camera from Evolution X, pinned -->
+  <project name="hardware_dolby" path="hardware/dolby" remote="evo" revision="caee5b2a6e48e4fc163707a52debe1de18330e83" upstream="cnb-aidl" clone-depth="1" />
+  <project name="device_xiaomi_miuicamera-marble" path="device/xiaomi/miuicamera-marble" remote="evo" revision="0b22ae7c40b34a0b2c235ff5bdbcdeb0f92ad510" upstream="cnb" />
+  <project name="vendor_xiaomi_miuicamera-marble" path="vendor/xiaomi/miuicamera-marble" remote="evo" revision="469a54819e0d54ffecaf693f4dbcf8a07dfa8838" upstream="cnb" clone-depth="1" />
 
   <!-- Audio HAL fork (multi-mic mapping) -->
   <remove-project path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" />
