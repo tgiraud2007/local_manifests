@@ -33,6 +33,10 @@
   <remove-project path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" />
   <project name="android_hardware_qcom_audio-ar" path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" remote="marble" groups="qcom,waipio-6.6-vendor" />
 
+  <!-- PAL fork (stereo master gain for awinic speakers, from Evolution X) -->
+  <remove-project path="hardware/qcom-caf/sm8450-6.6/audio/pal" />
+  <project name="android_vendor_qcom_opensource_arpal-lx" path="hardware/qcom-caf/sm8450-6.6/audio/pal" remote="marble" groups="qcom,waipio-6.6-vendor" />
+
   <!-- Display HAL fork (keep GPU composed layers contiguous: Display P3 photo picker) -->
   <remove-project path="hardware/qcom-caf/sm8450-6.6/display/hal" />
   <project name="android_hardware_qcom_display" path="hardware/qcom-caf/sm8450-6.6/display/hal" remote="marble" groups="qcom" />
