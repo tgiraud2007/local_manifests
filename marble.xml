@@ -40,4 +40,8 @@
   <!-- Display HAL fork (keep GPU composed layers contiguous: Display P3 photo picker) -->
   <remove-project path="hardware/qcom-caf/sm8450-6.6/display/hal" />
   <project name="android_hardware_qcom_display" path="hardware/qcom-caf/sm8450-6.6/display/hal" remote="marble" groups="qcom" />
+
+  <!-- Power HAL fork (uclamp ADPF, IFlingBoost extension, SupportInfo/EXPENSIVE_RENDERING fixes) -->
+  <remove-project path="vendor/qcom/opensource/power" />
+  <project name="android_vendor_qcom_opensource_power" path="vendor/qcom/opensource/power" remote="marble" />
 </manifest>
